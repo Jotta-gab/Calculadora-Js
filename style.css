@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+    --white: #fff;
+    --azul-escuro: #191970;
+    --cinza-claro: #708090;
+    --hover-dark: #DCDCDC;
+    --rgba: rgba(0, 0, 0, 0.4);
+    --cinza-botao: #4F4F4F;
+    --vermelho-botao: #B22222;
+    --click: #800000;
+}
+
+[data-theme="dark"] {
+    --white: #000;
+    --azul-escuro: #fff;
+    --cinza-claro: #C0C0C0;
+    --hover-dark: #1C1C1C;
+    --cinza-botao: #FF6347;
+    --vermelho-botao: #4169E1;
+    --rgba: rgba(181, 186, 186, 0.5);
+    --click: #000080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Audiowide', cursive;
+}
+
+.main {
+    background-color: var(--azul-escuro);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.visor {
+    background-color: var(--rgba);
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.calculadora {
+    background-color: var(--rgba);
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botao {
+    margin: 5px;
+    width: 65px;
+    height: 50px;
+    background-color: var(--cinza-claro);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.botao:hover {
+    background-color: var(--hover-dark);
+    color: var(--cinza-claro);
+    transform: translate(0, .25em);
+}
+
+.botao:active {
+    background: var(--click);
+    transform: translate(0, .75em);
+}
+
+
+.cinza {
+    background-color: var(--cinza-botao);
+}
+
+.vermelho {
+    background-color: var(--vermelho-botao);
+}
+
+#resultado {
+    width: auto;
+    height: 100px;
+    border: none;
+    margin: 5px;
+    color: var(--white);
+    background-color: transparent;
+    font-size: 42px;
+    text-align: right;
+}
+
+.tema {
+    margin: 10px;
+}
+
+.botao-tema {
+    display: inline-block;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: var(--vermelho-botao);
+    color: var(--white);
+    font-size: 16px;
+    transform-style: preserve-3d;
+    transition: all 150ms cubic-bezier(.175, .885, .32, 1.275);
+}
+
+.botao-tema:hover {
+    background-color: var(--hover-dark);
+    color: var(--cinza-claro);
+    transform: translate(0, .25em);
+}
+
+.botao-tema:active {
+    background: var(--click);
+    transform: translate(0, .75em);
+}
